@@ -29,10 +29,14 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				loader: "ts-loader",
-				options: {
-					configFile: "tsconfig.server.json",
-				},
+				use: [
+					{
+						loader: "ts-loader",
+						options: {
+							configFile: "tsconfig.client.json",
+						},
+					},
+				],
 			},
 		],
 	},
