@@ -15,7 +15,7 @@ export default function UsersPage() {
 	>();
 	const [searchTerm, setSearchTerm] = useState("");
 
-	const { isPending, isError, error, data, isPlaceholderData } = useQuery({
+	const { isPending, isError, error, data } = useQuery({
 		queryKey: [USERS_QUERY_KEY, page, orderBy, searchTerm],
 		queryFn: () =>
 			getUsers({
