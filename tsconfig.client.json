@@ -1,7 +1,7 @@
 {
   "include": ["client"],
   "compilerOptions": {
-    "module": "es6",
+    "module": "esnext",
     "target": "es5",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,

@@ -1,13 +1,13 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 import { QueryClientProvider } from "../contexts";
+import { GlobalStyle } from "../styles";
+import { Routes } from "../pages";
 
 export default function App() {
 	return (
 		<QueryClientProvider>
-			<Routes>
-				<Route path="/" element={<div>Home</div>} />
-			</Routes>
+			<GlobalStyle />
+			<Routes />
 		</QueryClientProvider>
 	);
 }
