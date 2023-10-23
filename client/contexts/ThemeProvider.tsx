@@ -6,13 +6,15 @@ import ToggleThemeContext from "./ToggleThemeContext";
 
 export const THEME_KEY = "theme" as const;
 
+type Props = {
+	children: ReactNode;
+	defaultTheme?: THEME_MODES;
+};
+
 export default function ThemeProvider({
 	defaultTheme = THEME_MODES.LIGHT,
 	children,
-}: {
-	children: ReactNode;
-	defaultTheme?: THEME_MODES;
-}) {
+}: Props) {
 	const [themeMode, setThemeMode] = useCookieStorage(THEME_KEY, defaultTheme);
 	const [mounted, setMounted] = useState(false);
 

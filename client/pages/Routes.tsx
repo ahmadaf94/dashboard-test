@@ -3,7 +3,9 @@ import { Route, Routes as RouterRoutes } from "react-router-dom";
 import { HOME_PATH, USERS_PATH } from "../constants";
 import { AppLayout } from "../layouts";
 
-const UsersPage = lazy(() => import("./users/UsersPage"));
+const UsersPage = lazy(() =>
+	import("../domains/user").then((module) => ({ default: module.UsersPage })),
+);
 
 export default function Routes() {
 	return (

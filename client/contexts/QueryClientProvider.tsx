@@ -6,11 +6,11 @@ import {
 
 const queryClient = new QueryClient();
 
-export default function QueryClientProvider({
-	children,
-}: {
+type Props = {
 	children: ReactNode;
-}) {
+};
+
+export default function QueryClientProvider({ children }: Props) {
 	return (
 		<ReactQueryClientProvider client={queryClient}>
 			{children}
