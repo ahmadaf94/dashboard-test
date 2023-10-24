@@ -17,9 +17,6 @@ module.exports = {
 	},
 	externals: [nodeExternals()],
 	target: "node",
-	node: {
-		__dirname: false,
-	},
 	plugins: [
 		new CopyPlugin({
 			patterns: [{ context: "server", from: "views", to: "views" }],
@@ -33,7 +30,7 @@ module.exports = {
 					{
 						loader: "ts-loader",
 						options: {
-							configFile: "tsconfig.client.json",
+							configFile: "tsconfig.server.json",
 						},
 					},
 				],
