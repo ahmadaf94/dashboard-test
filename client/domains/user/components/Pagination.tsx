@@ -18,8 +18,12 @@ export default function Pagination({
 
 	return (
 		<PaginationContainer>
-			<PaginationButton aria-disabled={currentPage === 1} onClick={onPrevPage}>
-				{"< Previous"}
+			<PaginationButton
+				aria-disabled={currentPage === 1}
+				onClick={onPrevPage}
+				aria-label="Previous Page"
+			>
+				{"<"}
 			</PaginationButton>
 			<span>
 				Page {currentPage} of {lastPage}
@@ -27,8 +31,9 @@ export default function Pagination({
 			<PaginationButton
 				aria-disabled={!hasMore}
 				onClick={() => hasMore && onNextPage()}
+				aria-label="Next Page"
 			>
-				{"Next >"}
+				{">"}
 			</PaginationButton>
 		</PaginationContainer>
 	);

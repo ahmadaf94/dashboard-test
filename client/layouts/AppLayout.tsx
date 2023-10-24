@@ -22,7 +22,7 @@ export default function AppLayout() {
 				<h1>User Task App</h1>
 
 				<TopBar>
-					<nav>
+					<nav aria-label="User Task App">
 						<NavList>
 							<li>
 								<NavLink to={HOME_PATH} end>
@@ -35,7 +35,7 @@ export default function AppLayout() {
 						</NavList>
 					</nav>
 
-					<ToggleThemeButton onClick={toggleTheme}>
+					<ToggleThemeButton onClick={toggleTheme} aria-label="Toggle Theme">
 						{theme.mode === THEME_MODES.LIGHT ? "🌙" : "☀️"}
 					</ToggleThemeButton>
 				</TopBar>

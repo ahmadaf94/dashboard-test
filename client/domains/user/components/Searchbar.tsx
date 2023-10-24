@@ -22,6 +22,7 @@ export default function Searchbar({ onSearch }: Props) {
 		<SearchInput
 			type="text"
 			placeholder="Search..."
+			aria-label="Search"
 			onChange={(e) => setSearchTerm(e.target.value)}
 		/>
 	);

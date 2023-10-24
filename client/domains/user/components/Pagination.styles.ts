@@ -12,6 +12,7 @@ export const PaginationButton = styled.button`
 	border: unset;
 	cursor: pointer;
 	color: ${({ theme }) => theme.colors.primary};
+	padding: 0.5rem;
 
 	&[aria-disabled="true"] {
 		cursor: not-allowed;
