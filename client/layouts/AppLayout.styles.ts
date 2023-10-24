@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Header = styled.header`
 	width: 100%;
@@ -10,7 +11,7 @@ export const Header = styled.header`
 	flex: none;
 `;
 
-export const Main = styled.main`
+export const Main = styled(motion.main)`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
