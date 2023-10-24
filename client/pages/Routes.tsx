@@ -1,11 +1,17 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes as RouterRoutes, useLocation } from "react-router-dom";
-import { HOME_PATH, USERS_PATH } from "../constants";
+import { HOME_PATH, USER_DETAILS_PATH, USERS_PATH } from "../constants";
 import { AppLayout } from "../layouts";
 import { AnimatePresence } from "framer-motion";
 
 const UsersPage = lazy(() =>
 	import("../domains/user").then((module) => ({ default: module.UsersPage })),
+);
+
+const UserDetailsPage = lazy(() =>
+	import("../domains/user").then((module) => ({
+		default: module.UserDetailsPage,
+	})),
 );
 
 export default function Routes() {
@@ -22,6 +28,15 @@ export default function Routes() {
 						element={
 							<Suspense>
 								<UsersPage />
+							</Suspense>
+						}
+					/>
+
+					<Route
+						path={USER_DETAILS_PATH}
+						element={
+							<Suspense>
+								<UserDetailsPage />
 							</Suspense>
 						}
 					/>

@@ -1,7 +1,5 @@
 import { parseLinkHeader } from "../../../utils";
 
-export const USERS_QUERY_KEY = "users";
-
 export type User = {
 	id: number;
 	name: string;
@@ -64,3 +62,13 @@ export const getUsers = async (options: {
 		totalPages: Number(lastPage),
 	};
 };
+
+export async function getUser(userId: number | string): Promise<User> {
+	const response = await fetch(`${process.env.JSON_API}/users/${userId}`);
+
+	if (!response.ok) {
+		throw new Error("Something went wrong!");
+	}
+
+	return response.json();
+}

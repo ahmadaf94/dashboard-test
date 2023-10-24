@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { getUsers, USERS_QUERY_KEY } from "../api/users";
+import { getUsers } from "../api/users";
 import { ErrorText, LoadingText, UsersPageContainer } from "./UsersPage.styles";
 import UsersList from "../components/UsersList";
 import Pagination from "../components/Pagination";
 import Searchbar from "../components/Searchbar";
 
 const PAGE_SIZE = 10 as const;
+const USERS_QUERY_KEY = "users" as const;
 
 export default function UsersPage() {
 	const [page, setPage] = useState(1);
