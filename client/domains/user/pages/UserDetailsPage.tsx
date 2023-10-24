@@ -4,7 +4,7 @@ import { USERS_PATH } from "../../../constants";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ErrorText, LoadingText } from "./UsersPage.styles";
-import { getUser } from "../api/users";
+import { getUser } from "../apis/users";
 
 const USER_QUERY_KEY = "user" as const;
 

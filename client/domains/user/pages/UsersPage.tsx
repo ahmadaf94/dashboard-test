@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { getUsers } from "../api/users";
+import { getUsers } from "../apis/users";
 import { ErrorText, LoadingText, UsersPageContainer } from "./UsersPage.styles";
 import UsersList from "../components/UsersList";
 import Pagination from "../components/Pagination";
