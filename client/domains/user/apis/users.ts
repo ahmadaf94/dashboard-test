@@ -1,5 +1,7 @@
 import { parseLinkHeader } from "../../../utils";
 
+const API_URL = `${process.env.JSON_API}/users` as const;
+
 export type User = {
 	id: number;
 	name: string;
@@ -21,7 +23,7 @@ export const getUsers = async (options: {
 	searchName?: string;
 	sort?: { field: string; order: "asc" | "desc" };
 }): Promise<Result> => {
-	const url = new URL(`${process.env.JSON_API}/users`);
+	const url = new URL(API_URL);
 
 	if (options.sort) {
 		url.searchParams.set("_sort", options.sort.field);
@@ -64,7 +66,7 @@ export const getUsers = async (options: {
 };
 
 export async function getUser(userId: number | string): Promise<User> {
-	const response = await fetch(`${process.env.JSON_API}/users/${userId}`);
+	const response = await fetch(`${API_URL}/${userId}`);
 
 	if (!response.ok) {
 		throw new Error("Something went wrong!");

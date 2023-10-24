@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import App from "../client/components/App";
+import { App } from "../client/components";
 import { StaticRouter } from "react-router-dom/server";
 import { ServerStyleSheet } from "styled-components";
 import cookieParser from "cookie-parser";

@@ -7,7 +7,7 @@ import {
 	TopBar,
 } from "./AppLayout.styles";
 import { NavLink, Outlet } from "react-router-dom";
-import { HOME_PATH, USERS_PATH } from "../constants";
+import { TASKS_PATH, USERS_PATH } from "../constants";
 import { ToggleThemeContext } from "../contexts";
 import { useTheme } from "styled-components";
 import { THEME_MODES } from "../styles";
@@ -25,7 +25,7 @@ export default function AppLayout() {
 					<nav aria-label="User Task App">
 						<NavList>
 							<li>
-								<NavLink to={HOME_PATH} end>
+								<NavLink to={TASKS_PATH} end>
 									Home
 								</NavLink>
 							</li>

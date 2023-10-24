@@ -1,4 +1,4 @@
-export const HOME_PATH = "/";
+export const TASKS_PATH = "/";
 
 export const USERS_PATH = "/users";
 
