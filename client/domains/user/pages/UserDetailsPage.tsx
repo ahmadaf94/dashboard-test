@@ -27,32 +27,34 @@ export default function UserDetailsPage() {
 
 		return (
 			<UserInfoTable>
-				<tr>
-					<th>Picture:</th>
-					<td>
-						<img src={data.profileImage} alt="profile" />
-					</td>
-				</tr>
-				<tr>
-					<th>Full name:</th>
-					<td>{`${data.name} ${data.lastName}`}</td>
-				</tr>
-				<tr>
-					<th>Email:</th>
-					<td>
-						<a href={`mailto:${data.email}`}>{data.email}</a>
-					</td>
-				</tr>
-				<tr>
-					<th>Age:</th>
-					<td>{data.age}</td>
-				</tr>
-				<tr>
-					<th>Address:</th>
-					<td>
-						<address>{data.address}</address>
-					</td>
-				</tr>
+				<tbody>
+					<tr>
+						<th>Picture:</th>
+						<td>
+							<img src={data.profileImage} alt="profile" />
+						</td>
+					</tr>
+					<tr>
+						<th>Full name:</th>
+						<td>{`${data.name} ${data.lastName}`}</td>
+					</tr>
+					<tr>
+						<th>Email:</th>
+						<td>
+							<a href={`mailto:${data.email}`}>{data.email}</a>
+						</td>
+					</tr>
+					<tr>
+						<th>Age:</th>
+						<td>{data.age}</td>
+					</tr>
+					<tr>
+						<th>Address:</th>
+						<td>
+							<address>{data.address}</address>
+						</td>
+					</tr>
+				</tbody>
 			</UserInfoTable>
 		);
 	})();
