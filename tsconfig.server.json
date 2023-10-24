@@ -1,7 +1,7 @@
 {
   "include": ["server"],
   "compilerOptions": {
-    "module": "esnext",
+    "module": "NodeNext",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -11,6 +11,7 @@
     "allowJs": true,
     "strict": true,
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "moduleResolution": "nodenext"
   }
 }
