@@ -8,7 +8,8 @@
     "build:client": "webpack --config webpack.config.client.js",
     "start:db": "json-server --watch db.json --port 3004",
     "start": "node ./dist/server.js",
-    "dev": "node ./dev.js"
+    "dev": "node ./dev.js",
+    "report": "webpack --config webpack.config.client.js --profile --json > stats.json; webpack-bundle-analyzer ./stats.json"
   },
   "author": "Ahmad Afshari",
   "license": "ISC",
@@ -28,6 +29,7 @@
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.9.1",
     "webpack-cli": "^5.1.4",
     "webpack-manifest-plugin": "^5.0.0",
     "webpack-node-externals": "^3.0.0"
@@ -45,7 +47,7 @@
     "react-router-dom": "^6.17.0",
     "styled-components": "^6.1.0"
   },
-  "engines" : {
-    "node" : ">=16.0.0 <21.0.0"
+  "engines": {
+    "node": ">=16.0.0 <21.0.0"
   }
 }
