@@ -1,5 +1,8 @@
 {
   "include": ["client"],
+  "exclude": [
+    "**/*.test.ts"
+  ],
   "compilerOptions": {
     "module": "esnext",
     "target": "es5",
