@@ -9,7 +9,7 @@
     "start:db": "json-server --watch db.json --port 3004",
     "start": "node ./dist/server.js",
     "dev": "node ./dev.js",
-    "report": "webpack --config webpack.config.client.js --profile --json > stats.json; webpack-bundle-analyzer ./stats.json"
+    "report": "webpack --config=webpack.config.client.js --profile --json dist/static/stats.json; webpack-bundle-analyzer dist/static/stats.json"
   },
   "author": "Ahmad Afshari",
   "license": "ISC",
