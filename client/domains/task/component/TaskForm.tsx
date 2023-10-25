@@ -8,7 +8,7 @@ export default function TaskForm() {
 
 	const { mutate: saveTaskMutation } = useMutation({
 		mutationFn: saveTask,
-		onSuccess: (data: Task) => {
+		onSuccess(data: Task) {
 			queryClient.setQueryData([TASKS_QUERY_KEY], (tasks: Task[]) => [
 				...tasks,
 				data,

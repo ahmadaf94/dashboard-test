@@ -18,11 +18,11 @@ export default function ThemeProvider({
 	const [themeMode, setThemeMode] = useCookieStorage(THEME_KEY, defaultTheme);
 	const [mounted, setMounted] = useState(false);
 
-	const toggleThemeMode = () => {
+	function toggleThemeMode() {
 		setThemeMode(
 			themeMode === THEME_MODES.LIGHT ? THEME_MODES.DARK : THEME_MODES.LIGHT,
 		);
-	};
+	}
 
 	useEffect(() => {
 		setMounted(true);
