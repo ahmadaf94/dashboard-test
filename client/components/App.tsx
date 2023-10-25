@@ -1,7 +1,7 @@
 import React from "react";
 import { QueryClientProvider } from "../contexts";
 import { GlobalStyle } from "../styles";
-import { Routes } from "../pages";
+import { Routes } from "../routes";
 import ErrorBoundary from "./ErrorBoundary";
 
 export default function App() {
