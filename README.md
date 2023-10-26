@@ -30,7 +30,7 @@ This is a test project for displaying a dashboard which uses json server to simu
 - `client` contains the frontend code.
 
 #### Client Structure
-All logics inside folder are guarded with index.ts files to expose only the needed files.
+Everything inside folders are guarded with index.ts files to expose only the needed functionalities.
 - `components` folder contains the shared components.
 - `routes` folder contains the react router routes.
 - `constants` folder contains the shared constants.
